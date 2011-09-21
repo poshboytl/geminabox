@@ -4,7 +4,7 @@ require 'sinatra/base'
 require 'rubygems'
 require 'rubygems/builder'
 require "rubygems/indexer"
-
+require 'authentication'
 require 'hostess'
 
 
@@ -24,6 +24,14 @@ class Geminabox < Sinatra::Base
   end
 
   autoload :GemVersionCollection, "geminabox/gem_version_collection"
+
+  helpers do
+    include Sinatra::Authentication
+  end
+
+  before do
+    require_admin
+  end
 
   get '/' do
     @gems = load_gems
