@@ -6,7 +6,13 @@
 
 Gem in a box is a simple [sinatra][sinatra] app to allow you to host your own in-house gems.
 
-It has no security, or authentication so you should handle this yourself.
+## Authentication
+
+It can do the http basic authentication.
+Which you just need set two env variables as the username and passowrd like:
+
+    export GEMINABOX_USERNAME="poshboytl"
+    export GEMINABOX_PASSWORD="111111"
 
 ## Server Setup
 
