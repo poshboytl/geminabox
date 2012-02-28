@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.require_paths     = ['lib']
 
   s.add_dependency('sinatra')
-  s.add_dependency('builder')
+  s.add_dependency('builder', '2.1.2')
 end
